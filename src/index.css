@@ -1,21 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* @layer base {
-  body {
-    padding: 0 16px;
-  }
-
-  @media (min-width: 768px){
-    body {
-        padding: 0 32px;
-    }
-
-    @media (min-width: 1024px)
-    {
-        body {
-            margin: 0 40px;
-        }
-    }
-  }
-} */
+@theme {
+    --color-mainColor:#0F172A;
+    --color-high:#475569;
+    --color-med:#64748B;
+    --color-low:#94A3B8; 
+}
