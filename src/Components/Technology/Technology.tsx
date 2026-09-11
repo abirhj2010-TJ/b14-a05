@@ -4,25 +4,29 @@ import "../../index.css";
 import { useState, type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 
-interface TechnologiesProps{
-technology: TechnologyType;
-technologyStack: TechnologyType[];
-setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>
+interface TechnologiesProps {
+  technology: TechnologyType;
+  technologyStack: TechnologyType[];
+  setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>;
 }
 
-const Technology = ({ technology, technologyStack, setTechnologyStack }: TechnologiesProps) => {
+const Technology = ({
+  technology,
+  technologyStack,
+  setTechnologyStack,
+}: TechnologiesProps) => {
   const [isStacked, setIsStacked] = useState(false);
 
   const handleAddToStack = () => {
+    
     setIsStacked(!isStacked);
     setTechnologyStack([...technologyStack, technology]);
-
-};
-
-
+  };
 
   return (
-    <div className={`space-y-5 rounded-xl bg-white p-5 shadow-sm flex flex-col justify-between ${isStacked ? "border border-card" : " border border-gray-200" }`}>
+    <div
+      className={`space-y-5 rounded-xl bg-white p-5 shadow-sm flex flex-col justify-between ${isStacked ? "border border-card" : " border border-gray-200"}`}
+    >
       <div className="flex items-center justify-between">
         <img
           className="h-10 w-10 object-contain"
@@ -79,8 +83,13 @@ const Technology = ({ technology, technologyStack, setTechnologyStack }: Technol
         disabled={isStacked}
         className={`btn btn-block rounded-lg ${isStacked ? "cursor-not-allowed bg-card/10 text-card" : "cursor-pointer bg-black text-white"}`}
       >
-        {isStacked ? (<><TiTick /> Added to Stack
-        </>): "Add to stack"}
+        {isStacked ? (
+          <>
+            <TiTick /> Added to Stack
+          </>
+        ) : (
+          "Add to stack"
+        )}
       </button>
     </div>
   );

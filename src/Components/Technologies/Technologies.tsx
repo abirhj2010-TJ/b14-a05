@@ -41,7 +41,7 @@ function Technologies({
           </div>
         </div>
         <div className="w-1/4">
-          <YourStack technologyStack = {technologyStack}></YourStack>
+          <YourStack technologyStack = {technologyStack} setTechnologyStack={setTechnologyStack}></YourStack>
         </div>
       </div>
     </div>
