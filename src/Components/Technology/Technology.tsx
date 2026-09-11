@@ -1,15 +1,25 @@
 import { FaStar } from "react-icons/fa";
 import type { TechnologyType } from "../../Types/technologyType";
 import "../../index.css";
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 
-const Technology = ({ technology }: { technology: TechnologyType }) => {
+interface TechnologiesProps{
+technology: TechnologyType;
+technologyStack: TechnologyType[];
+setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>
+}
+
+const Technology = ({ technology, technologyStack, setTechnologyStack }: TechnologiesProps) => {
   const [isStacked, setIsStacked] = useState(false);
 
   const handleAddToStack = () => {
     setIsStacked(!isStacked);
-  };
+    setTechnologyStack([...technologyStack, technology]);
+
+};
+
+
 
   return (
     <div className={`space-y-5 rounded-xl bg-white p-5 shadow-sm flex flex-col justify-between ${isStacked ? "border border-card" : " border border-gray-200" }`}>

@@ -1,4 +1,4 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { TechnologyType } from "../../Types/technologyType";
 import Technology from "../Technology/Technology";
 import YourStack from "../YourStack/YourStack";
@@ -10,11 +10,15 @@ function Technologies({
 }) {
   const technologies = use(technologyPromise);
 
+  const [technologyStack, setTechnologyStack] = useState<TechnologyType[]>([]);
+
+  console.log(technologyStack);
+
   return (
     <div className="my-20 px-30">
       <div>
         <h2 className="text-mainColor font-bold text-4xl mb-3">
-          Explore the{" "}
+          Explore the
           <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
             Technologies
           </span>
@@ -30,12 +34,14 @@ function Technologies({
               <Technology
                 key={technology.id}
                 technology={technology}
+                technologyStack={technologyStack}
+                setTechnologyStack={setTechnologyStack}
               ></Technology>
             ))}
           </div>
         </div>
         <div className="w-1/4">
-          <YourStack></YourStack>
+          <YourStack technologyStack = {technologyStack}></YourStack>
         </div>
       </div>
     </div>
