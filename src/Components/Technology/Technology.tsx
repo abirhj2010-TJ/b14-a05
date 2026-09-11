@@ -5,7 +5,7 @@ import { type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 import { toast } from "react-toastify";
 
-interface TechnologiesProps {
+interface TechnologyProps {
   technology: TechnologyType;
   technologyStack: TechnologyType[];
   setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>;
@@ -15,7 +15,7 @@ const Technology = ({
   technology,
   technologyStack,
   setTechnologyStack,
-}: TechnologiesProps) => {
+}: TechnologyProps) => {
   const isStacked = technologyStack.some((item) => item.id === technology.id);
 
   const handleAddToStack = () => {
@@ -84,7 +84,7 @@ const Technology = ({
         onClick={handleAddToStack}
         disabled={isStacked}
         className={`btn btn-block rounded-lg ${
-          isStacked ? " bg-[#EC4899]/10 text-[#EC4899]" : " bg-black text-white"
+          isStacked ? "bg-[#EC4899]/10 text-[#EC4899]" : "bg-black text-white"
         }`}
       >
         {isStacked ? (

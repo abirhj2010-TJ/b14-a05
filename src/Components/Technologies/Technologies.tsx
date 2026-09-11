@@ -1,6 +1,6 @@
-import { use, useState } from "react";
+import { Suspense, useState } from "react";
 import type { TechnologyType } from "../../Types/technologyType";
-import Technology from "../Technology/Technology";
+import TechnologiesList from "../TechnologiesList/TechnologiesList";
 import YourStack from "../YourStack/YourStack";
 
 function Technologies({
@@ -8,40 +8,39 @@ function Technologies({
 }: {
   technologyPromise: Promise<TechnologyType[]>;
 }) {
-  const technologies = use(technologyPromise);
-
   const [technologyStack, setTechnologyStack] = useState<TechnologyType[]>([]);
-
-  console.log(technologyStack);
 
   return (
     <div className="my-20 px-30">
       <div>
-        <h2 className="text-mainColor font-bold text-4xl mb-3">
-          Explore the
+        <h2 className="text-mainColor mb-3 text-4xl font-bold">
+          Explore the{" "}
           <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>
+
         <p className="text-med mb-10">
           Pick one technology per category to build your ideal stack
         </p>
       </div>
+
       <div className="flex gap-5">
         <div className="w-3/4">
-          <div className="grid grid-cols-3 gap-5">
-            {technologies.map((technology) => (
-              <Technology
-                key={technology.id}
-                technology={technology}
-                technologyStack={technologyStack}
-                setTechnologyStack={setTechnologyStack}
-              ></Technology>
-            ))}
-          </div>
+          <Suspense fallback={<p>Loading technologies...</p>}>
+            <TechnologiesList
+              technologyPromise={technologyPromise}
+              technologyStack={technologyStack}
+              setTechnologyStack={setTechnologyStack}
+            />
+          </Suspense>
         </div>
+
         <div className="w-1/4">
-          <YourStack technologyStack = {technologyStack} setTechnologyStack={setTechnologyStack}></YourStack>
+          <YourStack
+            technologyStack={technologyStack}
+            setTechnologyStack={setTechnologyStack}
+          />
         </div>
       </div>
     </div>

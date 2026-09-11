@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Footer from "./Components/Footer/Footer";
@@ -21,9 +21,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Banner></Banner>
-      <Suspense fallback={<h2>Loading Technologies...</h2>}>
-        <Technologies technologyPromise = {technologyPromise}></Technologies>
-      </Suspense>
+       <Technologies technologyPromise = {technologyPromise}></Technologies>
       <Footer></Footer>
     </>
   );
