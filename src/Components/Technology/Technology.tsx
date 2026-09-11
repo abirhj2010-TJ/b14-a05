@@ -1,7 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import type { TechnologyType } from "../../Types/technologyType";
 import "../../index.css";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 
 interface TechnologiesProps {
@@ -15,17 +15,19 @@ const Technology = ({
   technologyStack,
   setTechnologyStack,
 }: TechnologiesProps) => {
-  const [isStacked, setIsStacked] = useState(false);
+    
+
+  const isStacked = technologyStack.some((item) => item.id === technology.id);
 
   const handleAddToStack = () => {
-    
-    setIsStacked(!isStacked);
     setTechnologyStack([...technologyStack, technology]);
   };
 
   return (
     <div
-      className={`space-y-5 rounded-xl bg-white p-5 shadow-sm flex flex-col justify-between ${isStacked ? "border border-card" : " border border-gray-200"}`}
+      className={`flex flex-col justify-between space-y-5 rounded-xl bg-white p-5 shadow-sm ${
+        isStacked ? "border border-card" : "border border-gray-200"
+      }`}
     >
       <div className="flex items-center justify-between">
         <img
@@ -55,7 +57,7 @@ const Technology = ({
         </span>
       </div>
 
-      <div className="space-y-2 flex flex-col flex-1">
+      <div className="flex flex-1 flex-col space-y-2">
         <h2 className="text-xl font-bold text-gray-900">{technology.name}</h2>
 
         <p className="text-sm leading-6 text-gray-500">
@@ -81,14 +83,19 @@ const Technology = ({
       <button
         onClick={handleAddToStack}
         disabled={isStacked}
-        className={`btn btn-block rounded-lg ${isStacked ? "cursor-not-allowed bg-card/10 text-card" : "cursor-pointer bg-black text-white"}`}
+        className={`btn btn-block rounded-lg ${
+          isStacked
+            ? " bg-[#EC4899]/10 text-[#EC4899]"
+            : " bg-black text-white"
+        }`}
       >
         {isStacked ? (
           <>
-            <TiTick /> Added to Stack
+            <TiTick />
+            Added to Stack
           </>
         ) : (
-          "Add to stack"
+          "Add to Stack"
         )}
       </button>
     </div>

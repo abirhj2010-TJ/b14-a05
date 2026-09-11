@@ -4,10 +4,17 @@ import StackCard from "../StackCard/StackCard";
 
 interface TechnologyProps {
   technologyStack: TechnologyType[];
-  setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>
+  setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>;
 }
 
-const YourStack = ({ technologyStack, setTechnologyStack }: TechnologyProps) => {
+const YourStack = ({
+  technologyStack,
+  setTechnologyStack,
+}: TechnologyProps) => {
+  const handleEmptyStack = () => {
+    setTechnologyStack([]);
+  };
+
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-md">
       <h2 className="text-2xl font-bold text-gray-900">Your Stack</h2>
@@ -28,12 +35,17 @@ const YourStack = ({ technologyStack, setTechnologyStack }: TechnologyProps) => 
       ) : (
         <div>
           {technologyStack.map((technology) => (
-            <StackCard technology={technology} technologyStack = {technologyStack} setTechnologyStack = {setTechnologyStack}></StackCard>
+            <StackCard
+              technology={technology}
+              technologyStack={technologyStack}
+              setTechnologyStack={setTechnologyStack}
+            ></StackCard>
           ))}
         </div>
       )}
 
       <button
+        onClick={handleEmptyStack}
         className={`mt-5 btn btn-block border-red-400 text-red-500 font-bold rounded-lg hover:bg-red-300/40 ${technologyStack.length === 0 ? "hidden" : ""}`}
       >
         Remove All
