@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="container mx-auto ">
       <hr className="text-gray-300" />
-      <footer className="px-20">
+      <footer className="px-30">
         <div className="footer sm:footer-horizontal py-7 ">
           <aside>
             <img src={logo} alt="" />

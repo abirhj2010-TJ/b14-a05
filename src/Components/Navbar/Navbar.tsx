@@ -3,7 +3,7 @@ import hamburger from "../../assets/hamburger.png";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm container mx-auto px-20 sticky top-0">
+    <div className="navbar bg-base-100 shadow-sm container mx-auto px-30 sticky top-0">
       <div className="navbar-start">
         <div className="dropdown md:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost p-2">
