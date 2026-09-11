@@ -1,12 +1,18 @@
 import { FaStar } from "react-icons/fa";
 import type { TechnologyType } from "../../Types/technologyType";
 import "../../index.css";
+import { useState } from "react";
+import { TiTick } from "react-icons/ti";
 
 const Technology = ({ technology }: { technology: TechnologyType }) => {
+  const [isStacked, setIsStacked] = useState(false);
 
+  const handleAddToStack = () => {
+    setIsStacked(!isStacked);
+  };
 
   return (
-    <div className="space-y-5 rounded-xl border border-gray-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+    <div className={`space-y-5 rounded-xl bg-white p-5 shadow-sm flex flex-col justify-between ${isStacked ? "border border-card" : " border border-gray-200" }`}>
       <div className="flex items-center justify-between">
         <img
           className="h-10 w-10 object-contain"
@@ -58,8 +64,13 @@ const Technology = ({ technology }: { technology: TechnologyType }) => {
         </span>
       </div>
 
-      <button className="btn btn-block border-0 bg-black text-white rounded-lg">
-        Add to Stack
+      <button
+        onClick={handleAddToStack}
+        disabled={isStacked}
+        className={`btn btn-block rounded-lg ${isStacked ? "cursor-not-allowed bg-card/10 text-card" : "cursor-pointer bg-black text-white"}`}
+      >
+        {isStacked ? (<><TiTick /> Added to Stack
+        </>): "Add to stack"}
       </button>
     </div>
   );
