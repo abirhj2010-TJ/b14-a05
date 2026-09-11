@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { TechnologyType } from "../../Types/technologyType";
 import Technology from "../Technology/Technology";
+import YourStack from "../YourStack/YourStack";
 
 function Technologies({
   technologyPromise,
@@ -23,16 +24,18 @@ function Technologies({
         </p>
       </div>
       <div className="flex gap-5">
-        <div  className="grid grid-cols-3 gap-5">
-          {technologies.map((technology) => (
-            <Technology
-              key={technology.id}
-              technology={technology}
-            ></Technology>
-          ))}
+        <div className="w-3/4">
+          <div className="grid grid-cols-3 gap-5">
+            {technologies.map((technology) => (
+              <Technology
+                key={technology.id}
+                technology={technology}
+              ></Technology>
+            ))}
+          </div>
         </div>
-        <div>
-            <h2>Your Stack</h2>
+        <div className="w-1/4">
+          <YourStack></YourStack>
         </div>
       </div>
     </div>
