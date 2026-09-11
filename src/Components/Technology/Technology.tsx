@@ -1,6 +1,5 @@
 import { FaStar } from "react-icons/fa";
 import type { TechnologyType } from "../../Types/technologyType";
-import "../../index.css";
 import { type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 import { toast } from "react-toastify";
@@ -58,9 +57,9 @@ const Technology = ({
       </div>
 
       <div className="flex flex-1 flex-col space-y-2">
-        <h2 className="text-xl font-bold text-gray-900">{technology.name}</h2>
+        <h2 className="text-xl font-bold text-mainColor">{technology.name}</h2>
 
-        <p className="text-sm leading-6 text-gray-500">
+        <p className="text-sm leading-6 text-med">
           {technology.description}
         </p>
       </div>
@@ -70,11 +69,11 @@ const Technology = ({
           {technology.category}
         </span>
 
-        <span className="text-sm font-medium text-gray-500">
+        <span className="text-sm font-medium text-med">
           {technology.difficulty}
         </span>
 
-        <span className="flex items-center gap-1 font-semibold text-gray-700">
+        <span className="flex items-center gap-1 font-semibold text-med">
           <FaStar className="text-yellow-400" />
           {technology.rating}
         </span>

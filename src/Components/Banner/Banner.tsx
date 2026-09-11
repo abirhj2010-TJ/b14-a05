@@ -7,7 +7,7 @@ const Banner = () => {
         <h2 className="text-6xl font-bold lg:w-xl mb-5">
           Build Your Ideal <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E]/80 to-[#7C3AED] bg-clip-text text-transparent">Development Stack</span>
         </h2>
-        <p className="lg:w-md mb-12">
+        <p className="lg:w-md mb-12 text-high">
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
