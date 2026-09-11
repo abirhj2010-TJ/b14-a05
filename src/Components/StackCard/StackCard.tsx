@@ -1,6 +1,7 @@
 import { IoCloseSharp } from "react-icons/io5";
 import type { TechnologyType } from "../../Types/technologyType";
 import type { Dispatch, SetStateAction } from "react";
+import { toast } from "react-toastify";
 
 interface StackCardProps {
   technology: TechnologyType;
@@ -16,6 +17,8 @@ const StackCard = ({ technology, technologyStack, setTechnologyStack }: StackCar
         const remainingStack = technologyStack.filter(tech => tech.id !== technology.id);
 
         setTechnologyStack(remainingStack);
+
+        toast.success(`${technology.name} removed successfully`)
     }
 
   return (

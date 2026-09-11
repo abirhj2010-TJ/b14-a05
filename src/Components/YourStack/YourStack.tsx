@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../../Types/technologyType";
 import StackCard from "../StackCard/StackCard";
+import { toast } from "react-toastify";
 
 interface TechnologyProps {
   technologyStack: TechnologyType[];
@@ -13,6 +14,7 @@ const YourStack = ({
 }: TechnologyProps) => {
   const handleEmptyStack = () => {
     setTechnologyStack([]);
+    toast.success("All technologies removed successfully")
   };
 
   return (
