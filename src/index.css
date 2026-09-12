@@ -8,10 +8,10 @@
   --color-low: #94a3b8;
 
   --color-tech-blue: #2563eb;
-  --color-tech-green: #16a34a;
   --color-tech-purple: #9333ea;
-  --color-tech-orange: #ea580c;
   --color-tech-cyan: #0891b2;
 
-  --color-card: #EC4898;
+  --color-brand-start: #2563eb;
+  --color-brand-middle: #06b6d4;
+  --color-brand-end: #8b5cf6;
 }

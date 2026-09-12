@@ -11,11 +11,10 @@ function Technologies({
   const [technologyStack, setTechnologyStack] = useState<TechnologyType[]>([]);
 
   return (
-    <div className="my-20 px-30">
+    <div className="my-20 px-30 container mx-auto">
       <div>
         <h2 className="text-mainColor mb-3 text-4xl font-bold">
-          Explore the{" "}
-          <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
+          Explore the <span className="bg-linear-to-r from-brand-start to-brand-end bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>
@@ -27,7 +26,7 @@ function Technologies({
 
       <div className="flex gap-5">
         <div className="w-3/4">
-          <Suspense fallback={<p>Loading technologies...</p>}>
+          <Suspense fallback={<p className="text-center">Loading technologies...</p>}>
             <TechnologiesList
               technologyPromise={technologyPromise}
               technologyStack={technologyStack}

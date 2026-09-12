@@ -25,7 +25,7 @@ const Technology = ({
   return (
     <div
       className={`flex flex-col justify-between space-y-5 rounded-xl bg-white p-5 shadow-sm ${
-        isStacked ? "border border-card" : "border border-gray-200"
+        isStacked ? "border border-brand-start" : "border border-gray-200"
       }`}
     >
       <div className="flex items-center justify-between">
@@ -37,19 +37,16 @@ const Technology = ({
 
         <span
           className={`badge border-0 px-3 py-3 font-medium ${
-            technology.category === "Frontend"
+            technology.category === "Frontend" ||
+            technology.category === "Language"
               ? "bg-tech-blue/10 text-tech-blue"
-              : technology.category === "Backend"
-                ? "bg-tech-green/10 text-tech-green"
-                : technology.category === "Database"
+              : technology.category === "Backend" ||
+                  technology.category === "DevOps"
+                ? "bg-tech-cyan/10 text-tech-cyan"
+                : technology.category === "Database" ||
+                    technology.category === "Styling"
                   ? "bg-tech-purple/10 text-tech-purple"
-                  : technology.category === "Language"
-                    ? "bg-tech-cyan/10 text-tech-cyan"
-                    : technology.category === "Styling"
-                      ? "bg-tech-blue/10 text-tech-blue"
-                      : technology.category === "DevOps"
-                        ? "bg-tech-purple/10 text-tech-purple"
-                        : "bg-tech-orange/10 text-tech-orange"
+                  : "bg-tech-cyan/10 text-tech-cyan"
           }`}
         >
           {technology.badge}
@@ -59,9 +56,7 @@ const Technology = ({
       <div className="flex flex-1 flex-col space-y-2">
         <h2 className="text-xl font-bold text-mainColor">{technology.name}</h2>
 
-        <p className="text-sm leading-6 text-med">
-          {technology.description}
-        </p>
+        <p className="text-sm leading-6 text-med">{technology.description}</p>
       </div>
 
       <div className="flex items-center justify-between border-t border-gray-100 pt-4">
@@ -83,7 +78,9 @@ const Technology = ({
         onClick={handleAddToStack}
         disabled={isStacked}
         className={`btn btn-block rounded-lg ${
-          isStacked ? "bg-[#EC4899]/10 text-[#EC4899]" : "bg-black text-white"
+          isStacked
+            ? "bg-brand-start/10 text-brand-start"
+            : "bg-black text-white"
         }`}
       >
         {isStacked ? (

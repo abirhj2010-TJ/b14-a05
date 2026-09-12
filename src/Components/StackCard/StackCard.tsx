@@ -22,7 +22,7 @@ const StackCard = ({ technology, technologyStack, setTechnologyStack }: StackCar
     }
 
   return (
-    <div className="mt-5 flex items-center justify-between rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+    <div className="mt-5 flex items-center justify-between rounded-xl border border-gray-200 bg-white p-3 shadow-sm hover:border-brand-start">
       <div className="flex min-w-0 items-center gap-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-50">
           <img src={technology.icon} alt={technology.name} />

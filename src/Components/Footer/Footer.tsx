@@ -7,7 +7,17 @@ const Footer = () => {
       <footer className="px-30">
         <div className="footer sm:footer-horizontal py-7 ">
           <aside>
-            <img src={logo} alt="" />
+            <div className="flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-linear-to-tr from-brand-start/50 via-brand-middle/80 to-brand-end text-md font-bold text-white">
+                DS
+              </div>
+
+              <p className="text-lg font-bold">
+                Dev <span className=" bg-linear-to-r from-brand-start via-brand-middle to-brand-end bg-clip-text text-transparent">
+                  Stack
+                </span>
+              </p>
+            </div>
             <p className="w-md mt-3 text-med">
               Curated tools, technologies, and resources for developers building
               modern software.
