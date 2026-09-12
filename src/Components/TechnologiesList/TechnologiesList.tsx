@@ -1,6 +1,6 @@
 import { use, type Dispatch, type SetStateAction } from "react";
 import type { TechnologyType } from "../../Types/technologyType";
-import Technology from "../Technology/Technology";
+import Technology from "../TechnologyCard/TechnologyCard";
 
 interface TechnologiesListProps {
   technologyPromise: Promise<TechnologyType[]>;

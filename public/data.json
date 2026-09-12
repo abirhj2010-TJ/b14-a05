@@ -5,6 +5,7 @@
     "category": "Frontend",
     "description": "A JavaScript library for building fast, component-based user interfaces.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#61DAFB",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Popular"
@@ -15,6 +16,7 @@
     "category": "Frontend",
     "description": "A progressive framework for building approachable and versatile user interfaces.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#42B883",
     "rating": 4.6,
     "difficulty": "Beginner-Friendly",
     "badge": "Easy to Learn"
@@ -25,6 +27,7 @@
     "category": "Backend",
     "description": "A JavaScript runtime built on Chrome's V8 engine for building scalable server-side apps.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#339933",
     "rating": 4.7,
     "difficulty": "Intermediate",
     "badge": "Essential"
@@ -35,6 +38,7 @@
     "category": "Backend",
     "description": "A high-level Python web framework that encourages rapid, secure development.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg&output=png&w=128&h=128",
+    "badgeColor": "#092E20",
     "rating": 4.5,
     "difficulty": "Intermediate",
     "badge": "Secure"
@@ -45,6 +49,7 @@
     "category": "Database",
     "description": "A powerful, open-source object-relational database known for reliability and robustness.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#4169E1",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Reliable"
@@ -55,6 +60,7 @@
     "category": "Database",
     "description": "A flexible NoSQL document database designed for scalability and speed.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#47A248",
     "rating": 4.4,
     "difficulty": "Beginner-Friendly",
     "badge": "Flexible"
@@ -65,6 +71,7 @@
     "category": "Language",
     "description": "A strongly typed superset of JavaScript that compiles to plain JavaScript.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#3178C6",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Type-Safe"
@@ -75,6 +82,7 @@
     "category": "Language",
     "description": "A versatile, beginner-friendly programming language used across web, data, and AI.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#3776AB",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Versatile"
@@ -85,6 +93,7 @@
     "category": "Styling",
     "description": "A utility-first CSS framework for rapidly building custom user interfaces.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#06B6D4",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
     "badge": "Fast"
@@ -95,6 +104,7 @@
     "category": "Styling",
     "description": "A CSS preprocessor that adds variables, nesting, and mixins to standard CSS.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#CC6699",
     "rating": 4.5,
     "difficulty": "Beginner-Friendly",
     "badge": "Classic"
@@ -105,6 +115,7 @@
     "category": "DevOps",
     "description": "A platform for building, shipping, and running applications in lightweight containers.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#2496ED",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Containers"
@@ -115,6 +126,7 @@
     "category": "DevOps",
     "description": "An open-source system for automating deployment, scaling, and management of containers.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg&output=png&w=128&h=128",
+    "badgeColor": "#326CE5",
     "rating": 4.6,
     "difficulty": "Advanced",
     "badge": "Scalable"
@@ -125,6 +137,7 @@
     "category": "Tools",
     "description": "A distributed version control system for tracking changes in source code.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#F05032",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
@@ -135,6 +148,7 @@
     "category": "Tools",
     "description": "A collaborative interface design tool for creating UI mockups and prototypes.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg&output=png&w=128&h=128",
+    "badgeColor": "#F24E1E",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -145,6 +159,7 @@
     "category": "Backend",
     "description": "A query language for APIs that enables precise, efficient data fetching.",
     "icon": "https://wsrv.nl/?url=cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg&output=png&w=128&h=128",
+    "badgeColor": "#E10098",
     "rating": 4.5,
     "difficulty": "Advanced",
     "badge": "Efficient"

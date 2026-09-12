@@ -4,11 +4,14 @@ import { type Dispatch, type SetStateAction } from "react";
 import { TiTick } from "react-icons/ti";
 import { toast } from "react-toastify";
 
+
 interface TechnologyProps {
   technology: TechnologyType;
   technologyStack: TechnologyType[];
   setTechnologyStack: Dispatch<SetStateAction<TechnologyType[]>>;
 }
+
+
 
 const Technology = ({
   technology,
@@ -35,22 +38,10 @@ const Technology = ({
           alt={technology.name}
         />
 
-        <span
-          className={`badge border-0 px-3 py-3 font-medium ${
-            technology.category === "Frontend" ||
-            technology.category === "Language"
-              ? "bg-tech-blue/10 text-tech-blue"
-              : technology.category === "Backend" ||
-                  technology.category === "DevOps"
-                ? "bg-tech-cyan/10 text-tech-cyan"
-                : technology.category === "Database" ||
-                    technology.category === "Styling"
-                  ? "bg-tech-purple/10 text-tech-purple"
-                  : "bg-tech-cyan/10 text-tech-cyan"
-          }`}
-        >
-          {technology.badge}
-        </span>
+        <div className="badge font-medium"
+        style={{backgroundColor: `${technology.badgeColor}33`, color: `${technology.badgeColor}`}}>
+  {technology.badge}
+</div>
       </div>
 
       <div className="flex flex-1 flex-col space-y-2">
