@@ -14,7 +14,8 @@ function Technologies({
     <div className="container mx-auto mt-2 md:mt-8 lg:mt-14 px-4 sm:px-6 md:px-8 lg:px-20 xl:px-30">
       <div className="text-center md:text-start">
         <h2 className="text-mainColor mb-3 text-3xl sm:text-4xl font-bold ">
-          Explore the <span className="bg-linear-to-r from-brand-start to-brand-end bg-clip-text text-transparent">
+          Explore the{" "}
+          <span className="bg-linear-to-r from-brand-start to-brand-end bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>
@@ -28,7 +29,12 @@ function Technologies({
         <div className="w-full md:w-2/3 lg:w-3/4">
           <Suspense
             fallback={
-              <p className="text-center">Loading technologies...</p>
+              <div className="flex items-center justify-center gap-3">
+                <p className="text-sm font-medium text-med">
+                  Loading technologies
+                </p>
+                <span className="loading loading-spinner loading-lg"></span>
+              </div>
             }
           >
             <TechnologiesList
