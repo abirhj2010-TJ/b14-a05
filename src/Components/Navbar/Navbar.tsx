@@ -19,19 +19,19 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content z-10 mt-3 w-48 rounded-box bg-base-100 p-2 text-high shadow"
           >
             <li>
-              <a className="text-brand-start">Home</a>
+              <a className="text-brand-start" href="">Home</a>
             </li>
             <li>
-              <a>Technologies</a>
+              <a href="">Technologies</a>
             </li>
             <li>
-              <a>Projects</a>
+              <a href="">Projects</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="">About</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="">Contact</a>
             </li>
           </ul>
         </div>
@@ -53,29 +53,29 @@ const Navbar = () => {
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 font-semibold text-high">
           <li>
-            <a className="text-sm text-brand-middle lg:text-base">Home</a>
+            <a className="text-sm text-brand-middle lg:text-base" href="">Home</a>
           </li>
           <li>
-            <a className="text-sm lg:text-base">Technologies</a>
+            <a className="text-sm lg:text-base" href="">Technologies</a>
           </li>
           <li>
-            <a className="text-sm lg:text-base">Projects</a>
+            <a className="text-sm lg:text-base" href="">Projects</a>
           </li>
           <li>
-            <a className="text-sm lg:text-base">About</a>
+            <a className="text-sm lg:text-base" href="">About</a>
           </li>
           <li>
-            <a className="text-sm lg:text-base">Contact</a>
+            <a className="text-sm lg:text-base" href="">Contact</a>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end gap-1 sm:gap-2">
-        <a className="btn btn-ghost btn-xs rounded-full text-[10px] sm:btn-sm sm:text-xs md:text-md lg:text-base text-med">
+        <a className="btn btn-ghost rounded-full text-[10px] btn-sm md:btn-md md:text-md lg:text-base text-med" href="">
           Sign In
         </a>
 
-        <a className="btn btn-xs rounded-full bg-brand-middle text-[10px] text-white sm:btn-sm sm:text-xs md:text-md lg:text-base">
+        <a className="btn rounded-full bg-brand-middle text-[10px] text-white btn-sm md:btn-md md:text-md lg:text-base" href="">
           Sign Up
         </a>
       </div>
