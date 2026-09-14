@@ -69,11 +69,6 @@ const Technology = ({
 
       <div
         className={isStacked ? "cursor-not-allowed" : "cursor-pointer"}
-        onClick={() => {
-          if (isStacked) {
-            toast.warning(`${technology.name} is already in your stack`);
-          }
-        }}
       >
         <button
           onClick={handleAddToStack}

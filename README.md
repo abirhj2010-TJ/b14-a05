@@ -44,7 +44,7 @@ Answer: useEffect runs code after a component renders. It is used for side effec
 
 I did not use useEffect hook in this project. But it can be used to fetch json data from an API or public file in the project.
 
-1. Why does every item in a .map() list need a unique key prop?
+5. Why does every item in a .map() list need a unique key prop?
 
 Answer: React uses the key to identify each item in a list. A unique key helps React understand which item has changed or added or removed and update the UI accordingly. Without an unique key, React may update the wrong element.
 

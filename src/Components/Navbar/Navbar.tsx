@@ -101,7 +101,7 @@ const Navbar = () => {
         </a>
 
         <a
-          className="btn rounded-full bg-brand-middle text-[9px] text-white btn-sm md:btn-md md:text-md lg:text-base"
+          className="btn rounded-full bg-linear-to-r from-brand-start/70 via-brand-middle to-brand-end text-[9px] text-white btn-sm md:btn-md md:text-md lg:text-base"
           href=""
         >
           Sign Up
