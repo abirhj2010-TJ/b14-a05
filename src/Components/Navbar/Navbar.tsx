@@ -63,29 +63,29 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal px-1 font-semibold text-high">
+        <ul className="menu menu-horizontal px-1 font-semibold text-high ">
           <li>
-            <a className="text-sm text-brand-middle lg:text-base" href="">
+            <a className="text-sm text-brand-middle lg:text-base hover:bg-brand-middle/10" href="">
               Home
             </a>
           </li>
           <li>
-            <a className="text-sm lg:text-base" href="">
+            <a className="text-sm lg:text-base hover:bg-brand-middle/10" href="">
               Technologies
             </a>
           </li>
           <li>
-            <a className="text-sm lg:text-base" href="">
+            <a className="text-sm lg:text-base hover:bg-brand-middle/10" href="">
               Projects
             </a>
           </li>
           <li>
-            <a className="text-sm lg:text-base" href="">
+            <a className="text-sm lg:text-base hover:bg-brand-middle/10" href="">
               About
             </a>
           </li>
           <li>
-            <a className="text-sm lg:text-base" href="">
+            <a className="text-sm lg:text-base hover:bg-brand-middle/10" href="">
               Contact
             </a>
           </li>
@@ -94,7 +94,7 @@ const Navbar = () => {
 
       <div className="navbar-end gap-1 sm:gap-2">
         <a
-          className="btn btn-ghost rounded-full text-[9px] text-med btn-sm md:btn-md md:text-md lg:text-base"
+          className="btn btn-ghost rounded-full text-[9px] text-med btn-sm md:btn-md md:text-md lg:text-base hover:bg-brand-middle/10 hover:border-brand-middle"
           href=""
         >
           Sign In
